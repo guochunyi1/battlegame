@@ -1,11 +1,18 @@
 package battlegame.gumble.entity;
 
-public class Character {
+public class Hero {
 	private String name;
 	private Integer id;
 	private Integer attack;
 	private Integer hp;
 	private Integer defense;
+	private Integer rare;
+	public Integer getRare() {
+		return rare;
+	}
+	public void setRare(Integer rare) {
+		this.rare = rare;
+	}
 	public Integer getAttack() {
 		return attack;
 	}

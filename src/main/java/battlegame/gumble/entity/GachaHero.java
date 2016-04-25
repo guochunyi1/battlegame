@@ -1,10 +1,17 @@
 package battlegame.gumble.entity;
 
-public class GachaCharacter {
+public class GachaHero {
 	private Integer id;
 	private Integer gachaId;
-	private Integer characterId;
+	private Integer heroId;
 	private Float probability;
+	
+	public Integer getHeroId() {
+		return heroId;
+	}
+	public void setHeroId(Integer heroId) {
+		this.heroId = heroId;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -16,12 +23,6 @@ public class GachaCharacter {
 	}
 	public void setGachaId(Integer gachaId) {
 		this.gachaId = gachaId;
-	}
-	public Integer getCharacterId() {
-		return characterId;
-	}
-	public void setCharacterId(Integer characterId) {
-		this.characterId = characterId;
 	}
 	public Float getProbability() {
 		return probability;
