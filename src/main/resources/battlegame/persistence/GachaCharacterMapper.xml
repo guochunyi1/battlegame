@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="battlegame.gumble.persistence.GachaCharacterMapper" >
+  <resultMap id="BaseResultMap" type="battlegame.gumble.entity.GachaCharacter" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="gacha_id" property="gachaId" jdbcType="INTEGER" />
+    <result column="character_id" property="characterId" jdbcType="INTEGER" />
+    <result column="probability" property="probability" jdbcType="FLOAT" />
+  </resultMap>
+ <select id="selectGachaCharacter" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id,gacha_id,character_id,probability from gacha_character 
+    where gacha_id = #{gachaId, jdbcType=INTEGER}
+  </select>
+</mapper>
